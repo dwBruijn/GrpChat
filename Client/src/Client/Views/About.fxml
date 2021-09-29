@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.Font?>
+<?import com.jfoenix.controls.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="350.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Client.Controllers.AboutController">
+   <children>
+      <VBox alignment="TOP_CENTER" prefHeight="350.0" prefWidth="400.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" styleClass="themeColor">
+         <children>
+            <Label styleClass="themeLabel" text="I3305 Project">
+               <padding>
+                  <Insets top="50.0" />
+               </padding>
+                <font>
+                    <Font size="23.0" />
+                </font>
+            </Label>
+            <Label styleClass="themeLabel" text="By Charbel Farhat">
+               <padding>
+                  <Insets top="30.0" />
+               </padding>
+            </Label>
+            <JFXButton fx:id="buttonClose" onAction="#Close" text="Close" textFill="WHITE">
+               <VBox.margin>
+                  <Insets top="60.0" />
+               </VBox.margin>
+            </JFXButton>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

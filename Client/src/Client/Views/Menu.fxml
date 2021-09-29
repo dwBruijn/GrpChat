@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import com.jfoenix.controls.*?>
+
+<VBox fx:id="menuFxmlVBox" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="540.0" prefWidth="200.0" styleClass="themeColor" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <JFXButton fx:id="buttonAbout" onAction="#About" prefHeight="70.0" prefWidth="200.0" text="About" textFill="WHITE" />
+      <JFXButton fx:id="buttonExit2" onAction="#Exit" prefHeight="70.0" prefWidth="200.0" text="Exit" textFill="WHITE" />
+   </children>
+</VBox>

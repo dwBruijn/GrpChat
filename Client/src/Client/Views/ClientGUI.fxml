@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDrawer?>
+<?import com.jfoenix.controls.JFXHamburger?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Client.Controllers.ClientGUIController">
+   <children>
+      <VBox AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <!-- hbox holds the drawer icon and the username -->
+            <HBox fx:id="header" minHeight="62.0" minWidth="900.0" prefHeight="62.0" prefWidth="900.0" styleClass="themeColor">
+               <children>
+                  <JFXHamburger fx:id="buttonMenu">
+                     <HBox.margin>
+                        <Insets left="25.0" />
+                     </HBox.margin>
+                  </JFXHamburger>
+                  <Label fx:id="nameLabel" styleClass="themeLabel" text="username">
+                     <font>
+                        <Font size="23.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="20.0" top="12.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+            </HBox>
+            <!-- main window -->
+            <SplitPane fx:id="splitPane" dividerPositions="0.15" VBox.vgrow="ALWAYS">
+               <items>
+                  <!-- anchorpane holds the drawer and the online users list -->
+                  <AnchorPane fx:id="drawerAnchorPane">
+                     <children>
+                        <JFXDrawer fx:id="drawer" defaultDrawerSize="192.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                        <ListView fx:id="onlineList" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                     </children>
+                  </AnchorPane>
+                  <VBox>
+                     <children>
+                        <!-- listview is the chat area -->
+                        <ListView fx:id="chatList" VBox.vgrow="ALWAYS" />
+                        <!-- hbox under chat area holds the message TextField and the send button -->
+                        <HBox minHeight="33.0" prefHeight="33.0">
+                           <children>
+                              <JFXTextField fx:id="textField" HBox.hgrow="ALWAYS">
+                                 <font>
+                                    <Font size="19.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets bottom="2"/>
+                                 </padding>
+                                 <styleClass>
+                                    <String fx:value="jfxTextField" />
+                                 </styleClass>
+                              </JFXTextField>
+                              <JFXButton fx:id="buttonSend" onAction="#pressedSend" prefHeight="30.0" styleClass="themeColor" text="SEND" textFill="WHITE" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </items>
+            </SplitPane>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
